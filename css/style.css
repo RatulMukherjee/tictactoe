@@ -67,4 +67,172 @@ body {
   main {
     flex: 1 0 auto;
   }
-      
+
+  /* board design*/
+.board {
+    width: 100%;
+    height: 100%;
+}  
+.lefttop{
+    clear: both;
+    border-right-style: solid;
+	  border-bottom-style: solid;
+}
+
+
+@media (max-width: 540px), (max-height: 550px)
+.square {
+    border-width: 2px;
+}
+.square {
+    float: left;
+    width: 33.333333333%;
+    height: 33.333333333%;
+    cursor: pointer;
+     border-width: 4px;
+    border-color: #fff;
+    will-change: border-color;
+}
+.square.top {
+    border-bottom-style: solid;
+}
+.righttop {
+         border-left-style: solid;
+    border-bottom-style: solid;
+}
+.square.left {
+    clear: both;
+    border-right-style: solid;
+}
+.square.right {
+    border-left-style: solid;
+}
+.square.bottom {
+    border-top-style: solid;
+}
+i.medium {
+    font-size: 5rem;
+    margin-top: 7px;
+}
+*, *:before, *:after {
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+*, *:before, *:after {
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+/* board 2 */
+h1 {
+  text-align: center;
+  color: #0099ff;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: #00ff00;
+ }
+
+.line {
+  background-color: black;
+}
+
+
+
+.left {
+  /* grow | shrink | basis */
+  -webkit-flex: 0 1 200px; 
+  flex: 0 1 200px;
+  
+  text-align: center;
+  background: #ffff66;
+  border: 3px solid orange;
+}
+
+.middle {
+  /* grow | shrink | basis */
+  -webkit-flex: 0 0 350px; 
+  flex: 0 0 350px;
+
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+
+
+p {
+  font-size: 1.3rem; /* 20px (target) / 16px (context) = result */
+}
+
+.x {
+  color: #009688;
+  font-weight: bold;
+}
+
+.o {
+  color: #e0e0e0 ;
+  font-weight: bold;
+}  
+
+f12 {
+  /*background-color: #fff;*/
+  border: 1px solid black;
+}
+.c1, .c2, .c3 {
+  border-top-style: none;
+}
+
+.c3, .c6, .c9 {
+  border-right-style: none;
+}
+
+.c7, .c8, .c9 {
+  border-bottom-style: none;
+}
+
+.c1, .c4, .c7 {
+  border-left-style: none;
+}
+
+.winner {
+  background-color: #ff6;
+}
+/*biv box*/
+.box1{
+border: 2px solid #41dac6;border-left-style: none;border-top-style: none;cursor: pointer;
+}
+.box2{
+    border: 2px solid #41dac6;border-top-style: none;cursor: pointer;
+}
+.box3{
+    border: 2px solid #41dac6; border-right-style: none;border-top-style: none;cursor: pointer;
+}
+.box4{
+    border: 2px solid #41dac6;border-left-style: none;cursor: pointer;
+}
+.box5{
+    border: 2px solid #41dac6;cursor: pointer;
+}
+.box6{
+    border: 2px solid #41dac6;border-right-style: none;cursor: pointer;
+}
+.box7{
+    border: 2px solid #41dac6;border-left-style: none;border-bottom-style: none;cursor: pointer;
+}
+.box8{
+    border: 2px solid #41dac6;border-bottom-style: none;cursor: pointer;
+}
+.box9{
+    border: 2px solid #41dac6;border-right-style: none;border-bottom-style: none;cursor: pointer;
+}
+
+/*add remove class*/
+.disabledbutton {
+    pointer-events: none;
+    
+}
+
+
