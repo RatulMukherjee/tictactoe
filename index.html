@@ -4,13 +4,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title> Tic Tac Toe</title>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
  
 </head>
 <body >
 <h1> Hello </h1>
 
-<button onclick='hit()'>Hit me!</button>
+<button>Hit me!</button>
 
 
 
@@ -18,12 +19,12 @@
   
 
 <script type="text/javascript"> 
- function hit()
-    {
-        window.location = 'login2.html';
-        
-        
-    }
+$("button").click(function(){
+
+   alert ("this is index page");
+  //window.location = "login2.html";
+
+});
 </script>
 
 
