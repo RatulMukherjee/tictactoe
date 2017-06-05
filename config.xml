@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget 
+id="com.tictactoe.app" 
+version="1.0.0" 
+xmlns="http://www.w3.org/ns/widgets" 
+ xmlns:gap="http://phonegap.com/ns/1.0"
+>
+
+<name>Tic Tac Toe</name>
+<description>
+    A sample Phonegap app to play tic tac toe online</description>
+<author email="dev@cordova.apache.org" href="http://cordova.io">
+    Me
+</author>
+<content src="index.html" />
+<access origin="*" />
+<preference name="phonegap-version" value="3.0.0" />
+<preference name="Fullscreen" value="true" />
+<preference name="Orientation" value="landscape" />
+ <feature name="http://api.phonegap.com/1.0/battery"/>
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+
+</widget>
