@@ -27,16 +27,16 @@ xmlns="http://www.w3.org/ns/widgets"
 	<icon src = "res/icon/android/drawable-ldpi/logo.png" 
       gap:platform = "android" gap:qualifier = "ldpi" />
 		
-   <icon src = "res/icon/android/drawable-mdpi/logo.png" 
+   <icon src = "res/icon/android/logo.png" 
       gap:platform = "android" gap:qualifier = "mdpi" />
 		
-   <icon src = "res/icon/android/drawable-hdpi/logo.png" 
+   <icon src = "res/icon/android/logo.png" 
       gap:platform = "android" gap:qualifier = "hdpi" />
 		
-   <icon src = "res/icon/android/drawable-xhdpi/logo.png" 
+   <icon src = "res/icon/android/logo.png" 
       gap:platform = "android" gap:qualifier = "xhdpi" />
 		
-   <icon src = "res/icon/android/drawable-xxhdpi/logo.png" 
+   <icon src = "res/icon/android/logo.png" 
       gap:platform = "android" gap:qualifier = "xxhdpi" />
 
 </widget>
