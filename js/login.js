@@ -5,7 +5,7 @@ $(document).ready(function(){
         //console.log(dataString[0].value);return;
         $.ajax({
                 type: "POST",
-                url: "http://110.172.54.91:8888/games/app/login.php",
+                url: "110.172.54.91:8888/games/app/login.php",
                 data: dataString,
                 success: function(result)
                 {

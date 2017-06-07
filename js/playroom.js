@@ -78,8 +78,21 @@ $(document).ready(function(){
                 {
                      $('#mytable').find('tbody').remove();
                     var string = JSON.parse(result);
-                    //console.log(string[0].uname);
-                    for (i=0; i<string.length; i++)
+                    if (string.error == "404" )
+                        {
+                            //console.log("No users Online");
+                    
+                            var str="<h3 class=\"header center teal-text text-lighten-2\">No Users Online</h3>";
+                            $("#online").html(str);
+                            
+                        }
+                    else{
+                    
+                    var str="<h3 class=\"header center teal-text text-lighten-2\">Users Online</h3>";
+                    $("#online").html(str);
+                    
+                    //console.log(result);
+                    for (i=0; i<string.length-1; i++)
                         {
                             var str="<tbody>";
                             str="<tbody>";
@@ -87,6 +100,7 @@ $(document).ready(function(){
                             str+="</tbody>";
                              $("#mytable").append(str);
                         }
+                    }
                 }   
                 }); 
          $.ajax({
@@ -97,7 +111,7 @@ $(document).ready(function(){
              },
         success: function(result)
     {
-        console.log(result);
+        //console.log(result);
         var string = JSON.parse(result);
         //console.log(string);
         //console.log=(string);
@@ -126,8 +140,13 @@ $(document).ready(function(){
         
     }   
     });
-}, 5000);
-    
+}, 3000);
+    /*     $("#decline").click(function(){
+           console.log("declined");
+       });
+      $("#accept").click(function(){
+           console.log("accepted");
+       });*/
     });
     
     

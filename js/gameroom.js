@@ -120,6 +120,7 @@ function hit(id)
                 });
 }
 $(document).ready(function(){
+    countdown = 10;
     $.ajax({
                 type: "GET",
                 url: "http://110.172.54.91:8888/games/app/gameroom.php",
@@ -137,7 +138,7 @@ $(document).ready(function(){
                     $("#mydiv").append(str);
                 }   
                 });
-    setInterval(function(){ 
+    var timer = setInterval(function(){ 
           $.ajax({
                 type: "GET",
                 url: "http://110.172.54.91:8888/games/app/gameroom.php",
@@ -153,10 +154,34 @@ $(document).ready(function(){
                     if (string[0].turn == localStorage.getItem('token'))
                         {
                             $("#pointer").addClass("disabledbutton");
+                            countdown=10;
+                           
                         }
                     else
                         {
                           $("#pointer").removeClass("disabledbutton");
+                            //console.log(countdown);
+                            countdown--;
+                            if (countdown == 0)
+                            {
+                                //console.log("time's up");
+                                
+                                $.ajax({
+                                        type: "POST",
+                                        url: "http://110.172.54.91:8888/games/app/timeout.php",
+                                        data: {  
+                                                 myid:   localStorage.getItem('id'),
+                                                 myname: localStorage.getItem('name'),
+                                                 token:  localStorage.getItem('token')
+
+
+                                              },
+                                        success: function(result)
+                                        { 
+                                            
+                                        }   
+                                        });
+                            }
                         }
                     if ( string[0].result != "ongoing")
                         {
@@ -177,7 +202,10 @@ $(document).ready(function(){
                               $('#restart').find('div').remove();
                              var str="<div class=\"input-field col s12\"><button class=\"btn waves-effect waves-light teal lighten-2 z-depth-3\" type=\"submit\" name=\"newgame\" onclick=\"redirect()\" id=\"newgame\">Play New Game</button></div>";
                                $("#restart").append(str);
+                             clearInterval(timer);
                         }
+                      
+                       
                      $('#board').find('div').remove();
                        var str="";
                     if(string[0].box1!="X" && string[0].box1!="O")
