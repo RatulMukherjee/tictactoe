@@ -55,12 +55,6 @@ function decline()
                     console.log(result);
                 }   
                 });
-    
-    
-    
-    
-    
-    
 }
 $(document).ready(function(){
    //console.log(localStorage.getItem('name') + "abc" ); 
@@ -83,7 +77,9 @@ $(document).ready(function(){
                             //console.log("No users Online");
                     
                             var str="<h3 class=\"header center teal-text text-lighten-2\">No Users Online</h3>";
+                            str+="<button class=\"btn waves-effect waves-light teal lighten-2 z-depth-3 center\" onclick=\"window.location.href='playVsComputer.html'\" name=\"save\" id=\"save\">Play vs a Computer<i class=\"material-icons right\">send</i></button> ";
                             $("#online").html(str);
+                            
                             
                         }
                     else{
@@ -140,13 +136,7 @@ $(document).ready(function(){
         
     }   
     });
-}, 3000);
-    /*     $("#decline").click(function(){
-           console.log("declined");
-       });
-      $("#accept").click(function(){
-           console.log("accepted");
-       });*/
+}, 1000);
     });
     
     

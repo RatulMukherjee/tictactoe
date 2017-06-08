@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title> Tic Tac Toe</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="rgba(229, 229, 229, 0.26)">
+  <nav class=" z-depth-2" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><img src="img/logo.png" alt="Unsplashed background img 1"></a>
+    </div>
+  </nav>
+  <div  class="clear-fix">
+	<p>&nbsp;</p>
+	</div>
+  <div class="container" id="mydiv">
+        <h3 id = "turnInfo" class="header center teal-text text-lighten-2">Let's Start The Game </h3>
+		<!--<h5 class="header center teal-text text-lighten-2">Dipto vs ratul </h5>	-->
+  </div>
+  
+          
+  <section id="content">
+        <!--start container-->
+        <div class="container">
+          <!--Form Advance-->          
+          <div class="row center">
+              <div class="input-field col s12">
+						<button class="btn waves-effect waves-light teal lighten-2 z-depth-3" onclick="NewGame()" type="submit" name="save" id="save">New Game
+						<i class="material-icons right">send</i>
+                  
+                </button>
+              </div>
+            <div class="col s12 m12 l12">
+              <div class="card-panel z-depth-4 ">
+                  <div class="row" id="pointer">
+                <div class="row center" id="board">
+                    <div class="col s4 box1 allmove " id="box0" onclick="hit(0)"><h3 style="visibility: hidden;" >1</h3></div>
+                    <div class="col s4 box2 allmove " id="box1" onclick="hit(1)"><h3 style="visibility: hidden;" >1</h3></div>
+                    <div class="col s4 box3 allmove " id="box2" onclick="hit(2)"><h3 style="visibility: hidden;" >1</h3></div>
+                    <div class="col s4 box4 allmove " id="box3" onclick="hit(3)"><h3 style="visibility: hidden;" >1</h3></div>
+                    <div class="col s4 box5 allmove " id="box4" onclick="hit(4)"><h3 style="visibility: hidden;" >1</h3></div>
+                    <div class="col s4 box6 allmove " id="box5" onclick="hit(5)"><h3 style="visibility: hidden;" >1</h3></div>
+                    <div class="col s4 box7 allmove " id="box6" onclick="hit(6)"><h3 style="visibility: hidden;" >1</h3></div>
+                    <div class="col s4 box8 allmove " id="box7" onclick="hit(7)"><h3 style="visibility: hidden;" >1</h3></div>
+                    <div class="col s4 box9 allmove " id="box8" onclick="hit(8)"><h3 style="visibility: hidden;" >1</h3></div>
+                    
+			
+			     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="input-field col s12">
+						<button class="btn waves-effect waves-light teal lighten-2 z-depth-3" onclick="window.location.href='playroom.html'" name="save" id="save">Back to Playroom
+						<i class="material-icons right">send</i>
+                  
+                </button>
+              </div>
+            </div>
+          </div>
+      
+  </section>
+    
+ 
+  <div class="row center" id="restart">
+   <!-- <div class="input-field col s12">
+        <button class="btn waves-effect waves-light teal lighten-2 z-depth-3" type="submit" name="save" id="save">Restart
+           <i class="material-icons">restore</i>
+        </button>
+    </div>-->
+  </div>    
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/playVsComputer.js"></script>
+
+    
+  
+   
+</body>
+</html>

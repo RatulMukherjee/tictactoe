@@ -161,6 +161,9 @@ $(document).ready(function(){
                         {
                           $("#pointer").removeClass("disabledbutton");
                             //console.log(countdown);
+                            $('#mydiv').find('h3').remove();
+                            var str="<h3 class=\"header center teal-text text-lighten-2\"> Time Left: "+countdown+"</h3>";
+                            $("#mydiv").append(str);
                             countdown--;
                             if (countdown == 0)
                             {
@@ -187,7 +190,7 @@ $(document).ready(function(){
                         {
                             
                             //alert ("winner is: " +string[0].result);
-                             $('#resultdiv').find('div').remove();
+                             $('#mydiv').find('h3').remove();
                                 if (string[0].result == 'Sender')
                                     
                                 var str="<h5 class=\"header center teal-text text-lighten-2\"> The winner is "+string[0].sender_name+"</h5>";
@@ -197,7 +200,7 @@ $(document).ready(function(){
                                      var str="<h5 class=\"header center teal-text text-lighten-2\"> The game is a "+string[0].result+"</h5>";
                                      
                              $("#pointer").addClass("disabledbutton");     
-                             $("#resultdiv").html(str);
+                             $("#mydiv").append(str);
                             
                               $('#restart').find('div').remove();
                              var str="<div class=\"input-field col s12\"><button class=\"btn waves-effect waves-light teal lighten-2 z-depth-3\" type=\"submit\" name=\"newgame\" onclick=\"redirect()\" id=\"newgame\">Play New Game</button></div>";
